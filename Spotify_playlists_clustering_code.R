@@ -6,7 +6,7 @@ library(tidyverse)
 ########################################################################
 ##get the session ids needed for authorization
 id <- "3b9c6772e1f54c4eb48eccd01f90c413"
-secret <- "e70428064c134625930c2636c1483b7e"
+secret <- "###############################"
 
 Sys.setenv(SPOTIFY_CLIENT_ID = id)
 Sys.setenv(SPOTIFY_CLIENT_SECRET = secret)
@@ -245,62 +245,6 @@ put_selected_songs_in_a_playlist(user_id, playlist_I_chose, "Github_showcase")
 
 
 
-
-
-
-#load_tracks <- function(dat, id)  {
-  
-  
-  
-  
-  
-  
-  
-  if (nrow(dat) %/% 2 == 0) {
-    
-    for (i in seq(1,(nrow(dat)), by = 2)) {
-      
-      
-      u1 <-  dat[i,2]
-      u2 <-  dat[i + 1, 2]
-      
-      u1 <-  as.character(u1)
-      u2 <- as.character(u2)
-      
-      print(as.character(dat[i,2]))
-      print(as.character(dat[i + 1,2]))
-      
-      
-      add_tracks_to_playlist(id, uris = c(u1,  u2))
-    }
-  }
-  
-  if (nrow(dat) %/% 2 != 0) {
-    
-    sub1_sub <- rbind(dat, dat[nrow(dat),])
-    
-    for (i in seq(1,(nrow(sub1_sub)), by = 2)) {
-      
-      
-      u1 <-  sub1_sub[i, 2]
-      u2 <-  sub1_sub[i + 1, 2]
-      
-      u1 <-  as.character(u1)
-      u2 <- as.character(u2)
-      
-      print(as.character(sub1_sub[i, 2]))
-      print(as.character(sub1_sub[i + 1, 2]))
-      
-      
-      add_tracks_to_playlist(id, uris = c(u1, u2))
-    }
-    
-  }
-}
-
-
-
-#load_tracks(playlist_I_chose, new_playlist_df$id)
 
 
 
