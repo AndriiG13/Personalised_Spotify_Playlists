@@ -226,30 +226,3 @@ put_selected_songs_in_a_playlist <- function(user_id,chosen_playlst_df, name_of_
 ##upload the tracks to the playlist
 put_selected_songs_in_a_playlist(user_id, playlist_I_chose, "Github_showcase")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
